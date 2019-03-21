@@ -18,10 +18,13 @@ En sortie: [
   'Tofu contains 4 characters',
   'Mayonnaise contains 10 characters'
 ]
-
- */
-
+*/
+const languages = ['JavaScript', 'PHP', 'Java', 'Python'];
 function getStringsLength(strings) {
+  return {
+    string: string,
+    length: string.length
+  };
 }
 
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,

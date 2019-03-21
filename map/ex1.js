@@ -19,14 +19,14 @@ En sortie: [
   'Mayonnaise contains 10 characters'
 ]
 */
-const languages = ['JavaScript', 'PHP', 'Java', 'Python'];
+const languages = ['Cat', 'Lion', 'Tiger', 'Jaguar', 'Leopard'];
 function getStringsLength(strings) {
   return {
-    string: string,
-    length: string.length
+    strings: strings,
+    length: strings.length
   };
 }
-
+console.log(getStringsLength(['Cat', 'Lion', 'Tiger', 'Jaguar', 'Leopard']));
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,
 // mais alors, il faut alors lancer l'exercice avec node map/ex1
 // console.log(getStringsLength(['Cat', 'Lion', 'Tiger', 'Jaguar', 'Leopard']));

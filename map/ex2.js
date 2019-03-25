@@ -15,37 +15,23 @@ en fonction de la valeur de la propriété `isVegetarian`, en remplaçant FOOD
 par le nom du produit
 
 Exemple d'entrée:
-  [
-    {
-      food: 'Bacon',
-      isVegetarian: false
-    },
-    {
-      food: 'Sausage',
-      isVegetarian: false
-    },
-    {
-      food: 'Tofu',
-      isVegetarian: true
-    },
-    {
-      food: 'Chick Pea',
-      isVegetarian: true
-    }
-  ]
+  
 En sortie: [
   'Bacon is not suitable for vegetarians',
   'Sausage is not suitable for vegetarians',
   'Tofu is suitable for vegetarians',
   'Chick Pea is suitable for vegetarians'
 ]
-
- */
-
 function getFoodCategories(foods) {
-}
+ */
+'use strict';
 
-
+const foods = [{food:"Bacon", isVegetarian: false },{ food: "Sausage", isVegetarian: false },{ food: "Tofu", isVegetarian: true },{ food: "Chick Pea", isVegetarian: true }];
+const getFoodCategories = foods.map(function(test) {
+  if ( test.isVegetarian){ return test.food + " is suitable for vegetarians" ;}
+  else {return test.food + " is not suitable for vegetarians" ;}
+});
+console.log(getFoodCategories);
 
 // Ne pas modifier l'export
 module.exports = getFoodCategories;

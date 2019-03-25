@@ -17,19 +17,28 @@ En sortie: [
   'Bacon contains 5 characters',
   'Tofu contains 4 characters',
   'Mayonnaise contains 10 characters'
-]
-*/
-const languages = ['Cat', 'Lion', 'Tiger', 'Jaguar', 'Leopard'];
-function getStringsLength(strings) {
-  return {
-    strings: strings,
-    length: strings.length
-  };
+  function sayThanks(name) {
+  console.log('Thank you for your purchase ' + name + '! We appreciate your business.');
 }
-console.log(getStringsLength(['Cat', 'Lion', 'Tiger', 'Jaguar', 'Leopard']));
+
+sayThanks('Cole');
+]*/
+'use strict';
+
+function getStringsLength(stringArray) {
+  let stringArray2 = stringArray.map(function(string) {
+  return string + " contains " + string.length + " characters";
+  });
+  return stringArray2;
+  }
+  console.log(getStringsLength(['Cat', 'Lion', 'Tiger', 'Jaguar', 'Leopard']));
+// function getStringsLength(strings) {
+//   return strings +  ' contains ' +  strings.length + ' characters';
+// };
+//   console.log(getStringsLength(['Cat', 'Lion', 'Tiger', 'Jaguar', 'Leopard']));
+
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,
 // mais alors, il faut alors lancer l'exercice avec node map/ex1
-// console.log(getStringsLength(['Cat', 'Lion', 'Tiger', 'Jaguar', 'Leopard']));
 
 // Ne pas modifier l'export
 module.exports = getStringsLength;

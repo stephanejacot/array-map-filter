@@ -22,23 +22,18 @@ En sortie: [
 }
 
 sayThanks('Cole');
-]*/
-'use strict';
+] */
 
-function getStringsLength(stringArray) {
-  let stringArray2 = stringArray.map(function(string) {
-  return string + " contains " + string.length + " characters";
-  });
-  return stringArray2;
-  }
-  console.log(getStringsLength(['Cat', 'Lion', 'Tiger', 'Jaguar', 'Leopard']));
-// function getStringsLength(strings) {
-//   return strings +  ' contains ' +  strings.length + ' characters';
-// };
-//   console.log(getStringsLength(['Cat', 'Lion', 'Tiger', 'Jaguar', 'Leopard']));
+function getStringsLength (stringArray) {
+  const stringArray2 = stringArray.map(function (string) {
+    return string + ' contains ' + string.length + ' characters'
+  })
+  return stringArray2
+}
+console.log(getStringsLength(['Cat', 'Lion', 'Tiger', 'Jaguar', 'Leopard']))
 
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,
 // mais alors, il faut alors lancer l'exercice avec node map/ex1
 
 // Ne pas modifier l'export
-module.exports = getStringsLength;
+module.exports = getStringsLength

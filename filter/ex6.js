@@ -23,11 +23,26 @@ Sortie attendue:
   "Very useful tutorial, thank you so much!",
   "Which one is better, React or Angular?",
 ]
-
 */
+const bannedWords = ['bloody', 'damn']
+const comments = [
+  'Very useful tutorial, thank you so much!',
+  "React is not a damn framework, it's a LIBRARY",
+  'Why you put bloody kitten pictures in a tech tutorial is beyond me!',
+  'Which one is better, React or Angular?',
+  'There is no "better", it depends on your use case, DAMN YOU'
+];
 
-function filterOffensiveComments(comments, bannedWords) {
+function filterOffensiveComments(arr) {
+  return arr.filter(function (el) {
+    return el.toLowerCase().indexOf(bannedWords[0].toLowerCase()) < 0 && el.toLowerCase().indexOf(bannedWords[1].toLowerCase())<0
+  })
 }
+// const filterOffensiveComments = /*(comments) =>*/
+// comments.filter(function (com) {
+//   return com.includes('not', 'bloody') === true
+// })
+console.log(filterOffensiveComments(comments));
 
 // Ne pas modifier l'export
-module.exports = filterOffensiveComments;
+module.exports = filterOffensiveComments
